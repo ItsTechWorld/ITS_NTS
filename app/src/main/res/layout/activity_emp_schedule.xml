@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Month/Year:"
-        android:layout_alignBaseline="@id/spinershowmonths"
+
        android:layout_below="@id/headertext"
         android:layout_marginTop="20dp"
      />
@@ -52,7 +52,7 @@
         android:layout_below="@id/spinershowyears"
         android:text="Employe Name:"
         android:textAppearance="?android:textAppearanceMedium"
-        android:layout_alignBaseline="@id/employeename"
+
         />
     <EditText
         android:id="@+id/employeename"
@@ -60,6 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/empname"
         android:layout_below="@id/spinershowyears"
+        android:layout_alignBaseline="@id/employeename"
         />
     <EditText
         android:id="@+id/empid"
