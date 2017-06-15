@@ -13,4 +13,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/arslan"
+        android:layout_centerInParent="true"
+        android:text="Arslan"
+
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fareed"
+        android:layout_centerInParent="true"
+        android:text="Fareed"
+        android:layout_below="@+id/arslan"
+
+        />
 </RelativeLayout>
