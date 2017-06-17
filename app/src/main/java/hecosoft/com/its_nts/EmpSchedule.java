@@ -11,8 +11,11 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 public class EmpSchedule extends AppCompatActivity {
-    String[] country = {"Pakistan", "India", "Uk", "China"};
-    ArrayAdapter<String> countryListAdapter;
+    String[] month = {"jan", "Feb", "Mar", "Apr","May", "Jun", "July", "Aug","Sep", "Oct", "Nov", "December"};
+    String[] year = {"2011", "2012", "2013", "2014","2015", "2016", "2017"};
+    String[] empname = {"Ali", "Asif", "Abubakar", "Faisal","Akbar", "Lateef", "Noman", "Sarmad","Bilal", "Zain", "Ilyaas", "Waleed"};
+    ArrayAdapter<String> monthauto;
+    ArrayAdapter<String> yearauto;
     Spinner showmnth,showyear;
     AutoCompleteTextView editname;
     EditText editid;
@@ -27,12 +30,13 @@ public class EmpSchedule extends AppCompatActivity {
         btn=(Button)findViewById(R.id.next);
         showmnth=(Spinner)findViewById(R.id.spinershowmonths);
         showyear=(Spinner)findViewById(R.id.spinershowyears);
-        countryListAdapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, country);
-        autoemp= new ArrayAdapter<String>( this,android.R.layout.simple_list_item_1,country);
+        monthauto = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, month);
+        yearauto = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, year);
+        autoemp= new ArrayAdapter<String>( this,android.R.layout.simple_list_item_1,empname);
         editname.setAdapter(autoemp);
         editname.setThreshold(1);
-        showmnth.setAdapter(countryListAdapter);
-        showyear.setAdapter(countryListAdapter);
+        showmnth.setAdapter(monthauto);
+        showyear.setAdapter(yearauto);
         editname.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
