@@ -3,6 +3,9 @@ package hecosoft.com.its_nts;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -50,5 +53,22 @@ AutoCompleteTextView name;
                 startActivity(i);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.menu_salesorder,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==R.id.fareed)
+        {
+            Intent i=new Intent(getApplicationContext(),EmpSchedule.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
