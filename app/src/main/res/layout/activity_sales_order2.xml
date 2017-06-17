@@ -4,6 +4,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="hecosoft.com.its_nts.SalesOrder2">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Sales Order"
+        android:id="@+id/header2txt"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:gravity="center"
+        android:layout_marginTop="40px"
+        />
+    <TextView
+        android:id="@+id/monthyear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sales Type:"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_below="@id/header2txt"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        />
 
+    <Spinner
+        android:id="@+id/spinersalestype"
+        android:layout_width="190dp "
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/monthyear"
+        android:layout_below="@id/header2txt"
+        android:layout_marginLeft="10dp"
+android:layout_marginBottom="20dp"
+        >
+    </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Date:"
+        android:layout_below="@id/spinersalestype"
+
+        android:id="@+id/txt1"
+        android:layout_marginLeft="70dp"
+
+        />
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinersalestype"
+        android:id="@+id/orderdate"
+        android:layout_toRightOf="@id/txt1"
+        android:editable="false"
+        android:layout_alignBaseline="@id/txt1"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/showtime"
+        android:text="show"
+android:src="@drawable/cal1"
+android:layout_below="@id/spinersalestype"
+android:layout_toRightOf="@id/orderdate"
+
+        />
 
 </RelativeLayout>

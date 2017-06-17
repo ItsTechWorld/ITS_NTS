@@ -1,11 +1,13 @@
 package hecosoft.com.its_nts;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -17,12 +19,14 @@ AutoCompleteTextView name;
     String[] country = {"Pakistan", "India", "Uk", "China"};
     ArrayAdapter<String> countryListAdapter;
     ArrayAdapter<String> auto;
+    Button net;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_sales_order);
         name=(AutoCompleteTextView)findViewById(R.id.nameautocmplete);
         id1=(EditText)findViewById(R.id.showid);
+        net=(Button)findViewById(R.id.nextbtn);
         ship=(Spinner)findViewById(R.id.spinnershipto);
         countryListAdapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, country);
         auto=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,country);
@@ -32,8 +36,15 @@ AutoCompleteTextView name;
         name.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String s=(String)parent.getItemAtPosition(position);
+                String s = (String) parent.getItemAtPosition(position);
                 id1.setText(s);
+            }
+        });
+        net.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(NewSalesOrder.this,SalesOrder2.class);
+                startActivity(i);
             }
         });
     }
