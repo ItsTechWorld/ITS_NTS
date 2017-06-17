@@ -50,17 +50,112 @@
         android:layout_height="wrap_content"
         android:text="Ship To :"
         android:layout_below="@+id/headername"
-        android:layout_marginTop="40px"
+        android:layout_marginTop="40dp"
         android:id="@+id/headership"
-android:layout_marginLeft="80dp"
+android:layout_marginLeft="60dp"
         />
     <Spinner
-        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/spinnershipto"
         android:layout_toRightOf="@id/headership"
         android:layout_below="@id/nameautocmplete"
         android:layout_alignBaseline="@id/headership"
         ></Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CompanyName:"
+        android:layout_marginLeft="13dp"
+        android:layout_below="@+id/spinnershipto"
+        android:layout_marginTop="5px"
+        android:id="@+id/cmpanyname"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/cmpanyname"
+        android:layout_below="@id/spinnershipto"
+        android:layout_alignBaseline="@id/cmpanyname"
+        android:id="@+id/cmpanytxt"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address:"
+        android:layout_marginLeft="56dp"
+        android:layout_below="@+id/cmpanyname"
+        android:layout_marginTop="180px"
+        android:id="@+id/addressname"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/addressname"
+        android:layout_below="@id/cmpanyname"
+        android:layout_marginTop="60px"
+        android:id="@+id/addresstxt"
+android:gravity="top|left"
+        android:minLines="5"
+        android:maxLines="5"
+        android:inputType="textMultiLine"
+android:background="@drawable/edittext_border"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:scrollbars="vertical"
+
+        />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone #:"
+        android:layout_marginLeft="56dp"
+        android:layout_below="@+id/addressname"
+        android:layout_marginTop="200px"
+        android:id="@+id/phonename"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/phonename"
+        android:layout_below="@id/addresstxt"
+        android:layout_alignBaseline="@id/phonename"
+        android:id="@+id/phonetxt"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fax:"
+        android:layout_marginLeft="83dp"
+        android:layout_below="@+id/phonename"
+        android:layout_marginTop="70px"
+        android:id="@+id/faxname"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/faxname"
+        android:layout_below="@id/addresstxt"
+        android:layout_alignBaseline="@id/faxname"
+        android:id="@+id/faxtxt"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
 
 </RelativeLayout>
