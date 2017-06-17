@@ -31,13 +31,14 @@
 
        <Spinner
         android:id="@+id/spinershowmonths"
-        android:layout_width="190dp "
+        android:layout_width="170dp "
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/monthyear"
         android:layout_below="@id/headertext"
         android:layout_marginLeft="10dp"
         android:background="@drawable/spinner_border"
         android:popupBackground="#FFFF99"
+           android:layout_marginBottom="10dp"
 
         >
      </Spinner>
@@ -55,7 +56,7 @@
 
     <Spinner
         android:id="@+id/spinershowyears"
-        android:layout_width="190dp"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/year"
         android:layout_below="@id/spinershowmonths"
