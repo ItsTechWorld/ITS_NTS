@@ -31,7 +31,7 @@
 
        <Spinner
         android:id="@+id/spinershowmonths"
-        android:layout_width="200dp "
+        android:layout_width="190dp "
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/monthyear"
         android:layout_below="@id/headertext"
@@ -53,7 +53,7 @@
 
     <Spinner
         android:id="@+id/spinershowyears"
-        android:layout_width="200dp"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/year"
         android:layout_below="@id/spinershowmonths"
@@ -71,7 +71,7 @@
         android:textAppearance="?android:textAppearanceMedium"
 
         />
-    <EditText
+    <AutoCompleteTextView
         android:id="@+id/employeename"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
@@ -80,12 +80,14 @@
         android:layout_alignBaseline="@id/employeename"
         android:layout_marginLeft="10dp"
         />
+
     <EditText
         android:id="@+id/empid"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/spinershowyears"
         android:layout_toRightOf="@id/employeename"
+        android:editable="false"
 
         />
     <Button

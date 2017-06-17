@@ -21,14 +21,14 @@ AutoCompleteTextView name;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_sales_order);
-    name=(AutoCompleteTextView)findViewById(R.id.nameautocmplete);
+        name=(AutoCompleteTextView)findViewById(R.id.nameautocmplete);
         id1=(EditText)findViewById(R.id.showid);
         ship=(Spinner)findViewById(R.id.spinnershipto);
         countryListAdapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, country);
-auto=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,country);
+        auto=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,country);
         name.setAdapter(auto);
         ship.setAdapter(countryListAdapter);
-    name.setThreshold(2);
+        name.setThreshold(1);
         name.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
