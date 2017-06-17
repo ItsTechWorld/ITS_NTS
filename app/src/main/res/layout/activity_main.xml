@@ -3,31 +3,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+
     tools:context="hecosoft.com.its_nts.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/arslan"
-        android:layout_centerInParent="true"
-        android:text="Arslan"
+        android:text="Login Form!"
 
+        android:textAppearance="?android:textAppearanceLarge"
+        android:gravity="center_horizontal"
+        android:layout_margin="30dp"
+        android:id="@+id/logo"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/uname"
+        android:layout_below="@id/logo"
+        android:hint="UserName"
+
+
+        android:layout_margin="20dp"
+        />
+
+    <EditText
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/upass"
+        android:layout_below="@id/uname"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#000000"
         />
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/fareed"
+        android:text="Login"
+        android:layout_below="@id/upass"
+        android:layout_margin="20dp"
         android:layout_centerInParent="true"
-        android:text="Fareed"
-        android:layout_below="@+id/arslan"
-
+        android:id="@+id/login"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register Now !!"
+        android:layout_below="@id/login"
+        android:layout_margin="20dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/register"
         />
 </RelativeLayout>
