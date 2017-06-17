@@ -131,7 +131,7 @@ android:background="@drawable/edittext_border"
         android:layout_below="@id/addresstxt"
         android:layout_alignBaseline="@id/phonename"
         android:id="@+id/phonetxt"
-
+android:inputType="number"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         />
