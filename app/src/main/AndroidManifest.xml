@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".EmpSchedule" />
-        <activity android:name=".NewSalesOrder"></activity>
+        <activity android:name=".NewSalesOrder" />
+        <activity android:name=".SalesOrder2"></activity>
     </application>
 
 </manifest>
