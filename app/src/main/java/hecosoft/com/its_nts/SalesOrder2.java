@@ -25,7 +25,7 @@ public class SalesOrder2 extends AppCompatActivity {
     ImageButton btn,req;
     TextView text;
     EditText orderdate,reqdate;
-
+int i=0;
 
     SimpleDateFormat dateFormat=new SimpleDateFormat("dd/MM/yyyy");
     @Override
@@ -52,6 +52,7 @@ public class SalesOrder2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 updatedate();
+                i=1;
             }
         });
         btn.setOnClickListener(new View.OnClickListener() {
@@ -78,11 +79,17 @@ orderdate.setText(dateFormat.format(datetime.getTime()));
     DatePickerDialog.OnDateSetListener d=new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-datetime.set(Calendar.YEAR,year);
+datetime.set(Calendar.YEAR, year);
             datetime.set(Calendar.MONTH,monthOfYear);
-            datetime.set(Calendar.DAY_OF_MONTH,dayOfMonth);
-updatelabel();
-
+            datetime.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            if(i==1)
+            {
+                updatelabel2();
+                i=0;
+            }
+            else {
+                updatelabel();
+            }
         }
     };
 }
