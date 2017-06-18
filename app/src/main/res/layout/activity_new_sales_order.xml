@@ -55,13 +55,15 @@
 android:layout_marginLeft="60dp"
         />
     <Spinner
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/spinnershipto"
         android:layout_toRightOf="@id/headership"
         android:layout_below="@id/nameautocmplete"
-        android:layout_alignBaseline="@id/headership"
+        android:background="@drawable/spinner_border"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
         ></Spinner>
 
     <TextView
