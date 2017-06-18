@@ -3,25 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-
+android:background="#fff"
     tools:context="hecosoft.com.its_nts.MainActivity">
 
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="115dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/loginimg"
+        android:src="@drawable/signin2"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login Form"
-
+        android:text="Sign In"
+        android:textColor="#5f5f5f"
+android:layout_below="@+id/loginimg"
         android:textAppearance="?android:textAppearanceLarge"
         android:gravity="center_horizontal"
-        android:layout_margin="30dp"
-        android:id="@+id/logo"
+        android:layout_margin="10dp"
+        android:id="@+id/txtlogin"
         />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/uname"
-        android:layout_below="@id/logo"
+        android:layout_below="@id/txtlogin"
         android:hint="UserName"
 
 
@@ -39,21 +48,27 @@
         android:textColor="#000000"
         />
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
         android:layout_below="@id/upass"
         android:layout_margin="20dp"
         android:layout_centerInParent="true"
         android:id="@+id/login"
+android:background="#5cbd5c"
+        android:textColor="#ffffff"
+
         />
-    <Button
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register Now !!"
-        android:layout_below="@id/login"
-        android:layout_margin="20dp"
-        android:layout_centerInParent="true"
-        android:id="@+id/register"
+        android:text="Forgot Password ?"
+        android:layout_below="@+id/login"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:id="@+id/forgto"
+        android:textColor="#204b74"
         />
+
 </RelativeLayout>
