@@ -18,7 +18,10 @@
         <activity android:name=".EmpSchedule" />
         <activity android:name=".NewSalesOrder" />
         <activity android:name=".SalesOrder2" />
-        <activity android:name=".WelcomeMenu"></activity>
+        <activity
+            android:name=".Welcomemenu"
+            android:label="@string/title_activity_welcomemenu"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
