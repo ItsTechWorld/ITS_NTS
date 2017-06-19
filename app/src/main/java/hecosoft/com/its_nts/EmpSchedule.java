@@ -2,6 +2,7 @@ package hecosoft.com.its_nts;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -10,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-public class EmpSchedule extends AppCompatActivity {
+public class EmpSchedule extends NavigationDrawer {
     String[] month = {"jan", "Feb", "Mar", "Apr","May", "Jun", "July", "Aug","Sep", "Oct", "Nov", "December"};
     String[] year = {"2011", "2012", "2013", "2014","2015", "2016", "2017"};
     String[] empname = {"Ali", "Asif", "Abubakar", "Faisal","Akbar", "Lateef", "Noman", "Sarmad","Bilal", "Zain", "Ilyaas", "Waleed"};
@@ -24,7 +25,12 @@ public class EmpSchedule extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_emp_schedule);
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(getApplicationContext().LAYOUT_INFLATER_SERVICE);
+
+        //inflate your activity layout here!
+        View contentView = inflater.inflate(R.layout.activity_emp_schedule, null, false);
+        drawerLayout.addView(contentView, 0);
+
         editname=(AutoCompleteTextView)findViewById(R.id.employeename);
         editid  =(EditText)findViewById(R.id.empid);
         btn=(Button)findViewById(R.id.next);

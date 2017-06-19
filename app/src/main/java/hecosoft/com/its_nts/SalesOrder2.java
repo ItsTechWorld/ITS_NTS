@@ -3,6 +3,7 @@ package hecosoft.com.its_nts;
 import android.app.DatePickerDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -16,7 +17,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class SalesOrder2 extends AppCompatActivity {
+public class SalesOrder2 extends NavigationDrawer {
 
     String[] sales={"Cash Sales","Credit Sales"};
     ArrayAdapter<String> salesadapter,salespersonadapter,invoiceadapter;
@@ -31,8 +32,13 @@ int i=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sales_order2);
-    text=(TextView)findViewById(R.id.header2txt);
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(getApplicationContext().LAYOUT_INFLATER_SERVICE);
+
+        //inflate your activity layout here!
+        View contentView = inflater.inflate(R.layout.activity_sales_order2, null, false);
+        drawerLayout.addView(contentView, 0);
+
+        text=(TextView)findViewById(R.id.header2txt);
         salestypes=(Spinner)findViewById(R.id.spinersalestype);
         salesperson=(Spinner)findViewById(R.id.spinersalesperson);
         invoice=(Spinner)findViewById(R.id.spinerinvoice);

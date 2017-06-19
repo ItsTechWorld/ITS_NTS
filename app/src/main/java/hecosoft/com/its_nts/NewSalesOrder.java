@@ -3,6 +3,7 @@ package hecosoft.com.its_nts;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -15,7 +16,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class NewSalesOrder extends AppCompatActivity {
+public class NewSalesOrder extends NavigationDrawer {
 AutoCompleteTextView name;
     EditText id1;
     Spinner ship;
@@ -26,14 +27,18 @@ AutoCompleteTextView name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_sales_order);
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(getApplicationContext().LAYOUT_INFLATER_SERVICE);
+
+        //inflate your activity layout here!
+        View contentView = inflater.inflate(R.layout.activity_new_sales_order, null, false);
+        drawerLayout.addView(contentView, 0);
         name=(AutoCompleteTextView)findViewById(R.id.nameautocmplete);
         id1=(EditText)findViewById(R.id.showid);
         net=(Button)findViewById(R.id.nextbtn);
         ship=(Spinner)findViewById(R.id.spinnershipto);
-        Intent i=getIntent();
-        Bundle b=i.getExtras();
-        String n=b.getString("uname");
+        //Intent i=getIntent();
+        //Bundle b=i.getExtras();
+        //String n=b.getString("uname");
         countryListAdapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, country);
         auto=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,country);
         name.setAdapter(auto);

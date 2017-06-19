@@ -38,9 +38,10 @@ uname=(EditText)findViewById(R.id.uname);
            public void onClick(View v) {
                if(uname.getText().toString().equals("arsi")&&upass.getText().toString().equals("arsi"))
                {
-                   Intent i=new Intent(getApplicationContext(),NewSalesOrder.class);
-                   i.putExtra("uname",uname.getText().toString());
+                   Intent i=new Intent(getApplicationContext(),NavigationDrawer.class);
+
                    startActivity(i);
+               finish();
                }
            }
        });
