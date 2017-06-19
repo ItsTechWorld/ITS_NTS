@@ -38,7 +38,7 @@ txt=(TextView)findViewById(R.id.txtnav);
 
         if (actionBar != null) {
 
-            actionBar.setHomeAsUpIndicator(R.drawable.user1);
+            actionBar.setHomeAsUpIndicator(R.drawable.mainhaeader1);
 
             actionBar.setDisplayHomeAsUpEnabled(true);
 

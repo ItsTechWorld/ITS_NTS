@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/home"
-        android:icon="@drawable/ic_menu_camera"
+        android:icon="@drawable/homeicon1"
         android:title="Home" />
     <item
         android:id="@+id/myaccount"
-        android:icon="@drawable/ic_menu_camera"
+        android:icon="@drawable/myaccount1"
         android:title="My Account" />
     <item
         android:id="@+id/sales_menu"
-        android:icon="@drawable/ic_menu_camera"
+        android:icon="@drawable/sales1"
         android:title="New Sales Order" />
     <item
         android:id="@+id/employee_menu"
-        android:icon="@drawable/ic_menu_gallery"
+        android:icon="@drawable/schedule1"
         android:title="Employee Schedule" />
 
 
@@ -23,11 +23,11 @@
 <menu>
     <item
         android:id="@+id/changepass"
-        android:icon="@drawable/ic_menu_share"
+        android:icon="@drawable/setting1"
         android:title="Change Password" />
     <item
         android:id="@+id/logout"
-        android:icon="@drawable/ic_menu_send"
+        android:icon="@drawable/logout2"
         android:title="Logout" />
 </menu>
 </item>

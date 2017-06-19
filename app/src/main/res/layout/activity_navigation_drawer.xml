@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity"
-    android:background="@drawable/signin2"
+    android:background="@drawable/welcome1"
 
 
     >
@@ -34,16 +34,23 @@
             android:layout_height="wrap_content"
             android:text="WELCOME DEAR....!"
             android:id="@+id/txtnav"
-            android:layout_margin="30dp"
             android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="25dp"
+            android:layout_marginTop="130dp"
             />
+     <ImageView
+         android:layout_below="@+id/txtnav"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/itsandriod1"
+         android:layout_centerInParent="true"
+         android:layout_marginTop="10dp"
+
+         />
 
  </RelativeLayout>
     </FrameLayout>
-
-
-
-
 
     <android.support.design.widget.NavigationView
 
