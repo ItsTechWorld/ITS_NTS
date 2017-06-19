@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="#fff"
+    android:background="@drawable/bkgrnd1"
     tools:context="hecosoft.com.its_nts.MainActivity">
 
     <ImageView
@@ -13,18 +13,19 @@ android:background="#fff"
         android:layout_alignParentTop="true"
         android:layout_marginTop="20dp"
         android:id="@+id/loginimg"
-        android:src="@drawable/signin2"
+        android:src="@drawable/login2"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign In"
-        android:textColor="#5f5f5f"
-android:layout_below="@+id/loginimg"
+        android:textColor="#E57F03"
+        android:layout_below="@+id/loginimg"
         android:textAppearance="?android:textAppearanceLarge"
         android:gravity="center_horizontal"
         android:layout_margin="10dp"
         android:id="@+id/txtlogin"
+        android:textSize="40dp"
         />
     <EditText
         android:layout_width="match_parent"
@@ -32,9 +33,8 @@ android:layout_below="@+id/loginimg"
         android:id="@+id/uname"
         android:layout_below="@id/txtlogin"
         android:hint="UserName"
-
-
         android:layout_margin="20dp"
+
         />
 
     <EditText
@@ -68,7 +68,7 @@ android:background="#5cbd5c"
         android:gravity="center_horizontal"
         android:layout_margin="5dp"
         android:id="@+id/forgto"
-        android:textColor="#204b74"
+        android:textColor="#E57F03"
         />
 
 </RelativeLayout>

@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout
-
     xmlns:android="http://schemas.android.com/apk/res/android"
-
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     xmlns:tools="http://schemas.android.com/tools"
-
     android:id="@+id/drawer_layout"
-
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
-
     android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    android:background="@drawable/signin2"
 
-    tools:context=".MainActivity">
+
+    >
+
 
 
 
@@ -28,24 +25,20 @@
         android:layout_height="match_parent"
 
         android:orientation="vertical">
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
 
-
-        <TextView
+      <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome"
+            android:text="WELCOME DEAR....!"
             android:id="@+id/txtnav"
             android:layout_margin="30dp"
-            />
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="@drawable/signin2"
- android:layout_marginTop="50dp"
-            android:id="@+id/imgnav"
+            android:gravity="center"
             />
 
-
+ </RelativeLayout>
     </FrameLayout>
 
 
