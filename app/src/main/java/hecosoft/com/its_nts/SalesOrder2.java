@@ -37,7 +37,8 @@ int i=0;
         //inflate your activity layout here!
         View contentView = inflater.inflate(R.layout.activity_sales_order2, null, false);
         drawerLayout.addView(contentView, 0);
-
+        txt.setVisibility(View.INVISIBLE);
+        img.setVisibility(View.INVISIBLE);
         text=(TextView)findViewById(R.id.header2txt);
         salestypes=(Spinner)findViewById(R.id.spinersalestype);
         salesperson=(Spinner)findViewById(R.id.spinersalesperson);

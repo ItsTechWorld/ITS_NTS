@@ -30,10 +30,23 @@
         android:orientation="vertical">
 
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:id="@+id/txtnav"
+            android:layout_margin="30dp"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/signin2"
+ android:layout_marginTop="50dp"
+            android:id="@+id/imgnav"
+            />
 
 
     </FrameLayout>
-
 
 
 

@@ -32,6 +32,8 @@ AutoCompleteTextView name;
         //inflate your activity layout here!
         View contentView = inflater.inflate(R.layout.activity_new_sales_order, null, false);
         drawerLayout.addView(contentView, 0);
+        txt.setVisibility(View.INVISIBLE);
+        img.setVisibility(View.INVISIBLE);
         name=(AutoCompleteTextView)findViewById(R.id.nameautocmplete);
         id1=(EditText)findViewById(R.id.showid);
         net=(Button)findViewById(R.id.nextbtn);
@@ -60,20 +62,5 @@ AutoCompleteTextView name;
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.menu_salesorder,menu);
-        return super.onCreateOptionsMenu(menu);
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId()==R.id.fareed)
-        {
-            Intent i=new Intent(getApplicationContext(),EmpSchedule.class);
-            startActivity(i);
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }
