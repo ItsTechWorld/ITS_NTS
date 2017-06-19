@@ -14,6 +14,7 @@
             android:textAppearance="?android:textAppearanceMedium"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
+            android:textColor="#ffffff"
             />
 
 
@@ -27,6 +28,7 @@
          android:layout_below="@id/headertext"
          android:layout_marginTop="20dp"
          android:layout_marginLeft="100dp"
+        android:textColor="#ffffff"
      />
 
        <Spinner
@@ -52,6 +54,7 @@
         android:layout_below="@id/spinershowmonths"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="100dp"
+        android:textColor="#ffffff"
         />
 
     <Spinner
@@ -65,6 +68,7 @@
         android:background="@drawable/spinner_border"
         android:popupBackground="#FFFF99"
 
+
         >
     </Spinner>
     <TextView
@@ -74,6 +78,7 @@
         android:layout_below="@id/spinershowyears"
         android:text="Employe Name:"
         android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="#ffffff"
 
         />
     <AutoCompleteTextView
@@ -84,6 +89,7 @@
         android:layout_below="@id/spinershowyears"
         android:layout_alignBaseline="@id/employeename"
         android:layout_marginLeft="10dp"
+        android:textColor="#ffffff"
         />
 
     <EditText
@@ -93,6 +99,7 @@
         android:layout_below="@id/spinershowyears"
         android:layout_toRightOf="@id/employeename"
         android:editable="false"
+        android:textColor="#ffffff"
 
         />
     <Button
