@@ -31,7 +31,7 @@ public class EmpSchedule extends NavigationDrawer {
         View contentView = inflater.inflate(R.layout.activity_emp_schedule, null, false);
         drawerLayout.addView(contentView, 0);
         txt.setVisibility(View.INVISIBLE);
-        img.setVisibility(View.INVISIBLE);
+
         editname=(AutoCompleteTextView)findViewById(R.id.employeename);
         editid  =(EditText)findViewById(R.id.empid);
         btn=(Button)findViewById(R.id.next);

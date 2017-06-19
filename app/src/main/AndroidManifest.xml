@@ -15,13 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NavigationDrawer" />
         <activity android:name=".EmpSchedule" />
         <activity android:name=".NewSalesOrder" />
         <activity android:name=".SalesOrder2" />
-        <activity
-            android:name=".Welcomemenu"
-            android:label="@string/title_activity_welcomemenu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>

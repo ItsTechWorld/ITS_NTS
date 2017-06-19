@@ -21,7 +21,7 @@ import android.widget.Toast;
 public class NavigationDrawer extends AppCompatActivity {
 protected DrawerLayout drawerLayout;
     protected FrameLayout frameLayout;
-protected     ImageView img;
+
     protected TextView txt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ protected     ImageView img;
 
         final ActionBar actionBar = getSupportActionBar();
 txt=(TextView)findViewById(R.id.txtnav);
-        img=(ImageView)findViewById(R.id.imgnav);
+
 
         if (actionBar != null) {
 
