@@ -62,7 +62,7 @@ uname=(EditText)findViewById(R.id.uname);
             message=params[0];
             if(message.equals("login")) {
                 try {
-Log.d("hello","in login");
+
                     name = params[1];
                     password = params[2];
                     URL u = new URL(url);
@@ -70,7 +70,7 @@ Log.d("hello","in login");
                     con.setDoOutput(true);
 
                     con.setRequestMethod("POST");
-                    Log.d("hello", "connection ok ");
+
                     OutputStream os = con.getOutputStream();
                     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
                     String data = URLEncoder.encode("name", "UTF-8") + "=" + URLEncoder.encode(name, "UTF-8") + "&" +
@@ -85,7 +85,7 @@ Log.d("hello","in login");
                         sb.append(line);
                     }
                     String m=sb.toString();
-                    Log.d("Name",m);
+
                     return sb.toString();
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
@@ -100,7 +100,7 @@ Log.d("hello","in login");
 
         @Override
         protected void onPostExecute(String s) {
-Log.d("error",s);
+
             if(s.equals("Login Successful"))
             {
 
