@@ -36,13 +36,10 @@ uname=(EditText)findViewById(R.id.uname);
        btn1.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               if(uname.getText().toString().equals("arsi")&&upass.getText().toString().equals("arsi"))
-               {
-                   Intent i=new Intent(getApplicationContext(),NavigationDrawer.class);
-
-                   startActivity(i);
-               finish();
-               }
+               signin obj=new signin();
+               String n=uname.getText().toString();
+               String p=upass.getText().toString();
+               obj.execute("login",n,p);
            }
        });
     }
@@ -50,7 +47,7 @@ uname=(EditText)findViewById(R.id.uname);
     private class signin extends AsyncTask<String, Void, String>
     {
         StringBuilder sb=new StringBuilder();
-        String url="http://192.168.177.1/test/login.php";
+        String url="http://itsdbs/nts/login.php";
         String name;
         String password;
         String message;
@@ -65,7 +62,7 @@ uname=(EditText)findViewById(R.id.uname);
             message=params[0];
             if(message.equals("login")) {
                 try {
-
+Log.d("hello","in login");
                     name = params[1];
                     password = params[2];
                     URL u = new URL(url);
@@ -101,12 +98,14 @@ uname=(EditText)findViewById(R.id.uname);
 
         @Override
         protected void onPostExecute(String s) {
-            Log.d("Name", s);
-            if(s.equals("Login Successful"))
+
+            if(s.equals("Connection SuccessfullLogin Successful"))
             {
 
-                Intent i=new Intent(MainActivity.this,NewSalesOrder.class);
+                Intent i=new Intent(getApplicationContext(),NavigationDrawer.class);
+
                 startActivity(i);
+                finish();
             }
             else
             {
