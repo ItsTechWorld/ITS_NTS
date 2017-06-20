@@ -47,7 +47,7 @@ uname=(EditText)findViewById(R.id.uname);
     private class signin extends AsyncTask<String, Void, String>
     {
         StringBuilder sb=new StringBuilder();
-        String url="http://itsdbs/nts/login.php";
+        String url="http://192.168.1.6/nts/login.php";
         String name;
         String password;
         String message;
@@ -68,7 +68,9 @@ Log.d("hello","in login");
                     URL u = new URL(url);
                     HttpURLConnection con = (HttpURLConnection) u.openConnection();
                     con.setDoOutput(true);
+
                     con.setRequestMethod("POST");
+                    Log.d("hello", "connection ok ");
                     OutputStream os = con.getOutputStream();
                     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
                     String data = URLEncoder.encode("name", "UTF-8") + "=" + URLEncoder.encode(name, "UTF-8") + "&" +
@@ -98,8 +100,8 @@ Log.d("hello","in login");
 
         @Override
         protected void onPostExecute(String s) {
-
-            if(s.equals("Connection SuccessfullLogin Successful"))
+Log.d("error",s);
+            if(s.equals("Login Successful"))
             {
 
                 Intent i=new Intent(getApplicationContext(),NavigationDrawer.class);
