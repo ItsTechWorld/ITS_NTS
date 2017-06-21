@@ -3,6 +3,7 @@ package hecosoft.com.its_nts;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -37,6 +38,8 @@ txt.setVisibility(View.INVISIBLE);
         img.setVisibility(View.INVISIBLE);
         name=(AutoCompleteTextView)findViewById(R.id.nameautocmplete);
         id1=(EditText)findViewById(R.id.showid);
+        id1.setText("");
+        name.setText("");
         net=(Button)findViewById(R.id.nextbtn);
         ship=(Spinner)findViewById(R.id.spinnershipto);
         //Intent i=getIntent();
@@ -57,10 +60,17 @@ txt.setVisibility(View.INVISIBLE);
         net.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(NewSalesOrder.this,SalesOrder2.class);
-                startActivity(i);
-            }
-        });
+                    String a=name.getText().toString();
+                if (a.equals("")) {
+                    Log.d("Check","In if");
+
+                                     Toast.makeText(getApplicationContext(),"Please specify the Customer Name First",Toast.LENGTH_LONG).show();
+
+                } else {
+                      Intent i = new Intent(NewSalesOrder.this, SalesOrder2.class);
+                      startActivity(i);
+                }
+            } });
     }
 
 

@@ -47,7 +47,7 @@ uname=(EditText)findViewById(R.id.uname);
     private class signin extends AsyncTask<String, Void, String>
     {
         StringBuilder sb=new StringBuilder();
-        String url="http://192.168.1.6/nts/login.php";
+        String url="http://192.168.1.199/nts/login.php";
         String name;
         String password;
         String message;
