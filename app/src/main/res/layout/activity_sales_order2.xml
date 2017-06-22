@@ -5,23 +5,12 @@
     android:layout_height="match_parent"
     tools:context="hecosoft.com.its_nts.SalesOrder2">
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="New Sales Order"
-        android:id="@+id/header2txt"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:gravity="center"
-        android:layout_marginTop="40px"
-        android:layout_marginBottom="20dp"
-        android:textColor="#ffffff"
-        />
-    <TextView
         android:id="@+id/monthyear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sales Type:"
         android:textAppearance="?android:textAppearanceMedium"
-        android:layout_below="@id/header2txt"
+
         android:layout_marginTop="20dp"
         android:layout_marginLeft="70dp"
         android:textColor="#ffffff"
@@ -32,7 +21,7 @@
         android:layout_width="150dp "
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/monthyear"
-        android:layout_below="@id/header2txt"
+     android:layout_marginTop="10dp"
         android:background="@drawable/spinner_border"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"
@@ -122,7 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/notes"
         android:layout_below="@id/reqiredate"
-        android:layout_marginTop="70px"
+        android:layout_marginTop="60px"
         android:id="@+id/anotes"
         android:gravity="top|left"
         android:minLines="5"
@@ -155,7 +144,7 @@
         android:background="@drawable/spinner_border"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         >
     </Spinner>
     <TextView
@@ -179,8 +168,17 @@
         android:background="@drawable/spinner_border"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         >
-    </Spinner>
 
+    </Spinner>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/btnsave"
+android:layout_below="@id/spinerinvoice"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        />
 </RelativeLayout>

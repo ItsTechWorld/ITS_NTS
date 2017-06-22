@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -26,6 +27,7 @@ public class SalesOrder2 extends NavigationDrawer {
     ImageButton btn,req;
     TextView text;
     EditText orderdate,reqdate;
+    Button save;
 int i=0;
 
     SimpleDateFormat dateFormat=new SimpleDateFormat("dd/MM/yyyy");
@@ -40,8 +42,8 @@ int i=0;
 
         txt.setVisibility(View.INVISIBLE);
         img.setVisibility(View.INVISIBLE);
+save=(Button)findViewById(R.id.btnsave);
 
-        text=(TextView)findViewById(R.id.header2txt);
         salestypes=(Spinner)findViewById(R.id.spinersalestype);
         salesperson=(Spinner)findViewById(R.id.spinersalesperson);
         invoice=(Spinner)findViewById(R.id.spinerinvoice);
@@ -62,6 +64,13 @@ int i=0;
             public void onClick(View v) {
                 updatedate();
                 i=1;
+            }
+        });
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(getApplicationContext(),"Ready to Send",Toast.LENGTH_LONG).show();
             }
         });
         btn.setOnClickListener(new View.OnClickListener() {
