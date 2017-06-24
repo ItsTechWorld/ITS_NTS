@@ -18,7 +18,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class NewSalesOrder extends NavigationDrawer {
-AutoCompleteTextView name;
+    AutoCompleteTextView name;
     EditText id1;
     Spinner ship;
     String[] country = {"Pakistan", "India", "Uk", "China"};
@@ -34,7 +34,7 @@ AutoCompleteTextView name;
         View contentView = inflater.inflate(R.layout.activity_new_sales_order, null, false);
         drawerLayout.addView(contentView, 0);
 
-txt.setVisibility(View.INVISIBLE);
+        txt.setVisibility(View.INVISIBLE);
         img.setVisibility(View.INVISIBLE);
         name=(AutoCompleteTextView)findViewById(R.id.nameautocmplete);
         id1=(EditText)findViewById(R.id.showid);

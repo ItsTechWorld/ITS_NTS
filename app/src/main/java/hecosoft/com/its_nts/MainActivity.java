@@ -31,7 +31,7 @@ Button btn1,btn2;
         setContentView(R.layout.activity_main);
         btn1=(Button)findViewById(R.id.login);
 
-uname=(EditText)findViewById(R.id.uname);
+        uname=(EditText)findViewById(R.id.uname);
         upass=(EditText)findViewById(R.id.upass);
        btn1.setOnClickListener(new View.OnClickListener() {
            @Override

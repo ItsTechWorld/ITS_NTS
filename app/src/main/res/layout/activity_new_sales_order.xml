@@ -3,50 +3,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bkgrnd1"
 
     tools:context="hecosoft.com.its_nts.NewSalesOrder">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="New Sales Order"
         android:id="@+id/headertxt"
-        android:textAppearance="?android:textAppearanceMedium"
+        android:textAppearance="?android:textAppearanceLarge"
         android:gravity="center"
-        android:layout_marginTop="40px"
-        android:textColor="#ffffff"
+        android:textColor="#E57F03"
+        android:background="#175D77"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CustomerName:"
+        android:text="Customer Name:"
         android:layout_marginLeft="10dp"
         android:layout_below="@+id/headertxt"
         android:layout_marginTop="40px"
         android:id="@+id/headername"
         android:textColor="#ffffff"
+        android:textAppearance="?android:textAppearanceMedium"
 
         />
     <AutoCompleteTextView
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="25dp"
         android:layout_toRightOf="@id/headername"
         android:layout_below="@id/headertxt"
         android:layout_alignBaseline="@id/headername"
         android:id="@+id/nameautocmplete"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:textColor="#ffffff"
+        android:textColor="#34495E"
+
         />
     <EditText
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
         android:layout_toRightOf="@id/nameautocmplete"
         android:layout_below="@id/headertxt"
         android:layout_alignBaseline="@id/nameautocmplete"
         android:id="@+id/showid"
         android:editable="false"
-        android:textColor="#ffffff"
+        android:textColor="#34495E"
+
         />
 
     <TextView
@@ -56,18 +60,19 @@
         android:layout_below="@+id/headername"
         android:layout_marginTop="40dp"
         android:id="@+id/headership"
-android:layout_marginLeft="60dp"
+        android:layout_marginLeft="50dp"
         android:textColor="#ffffff"
+        android:textAppearance="?android:textAppearanceMedium"
         />
     <Spinner
         android:layout_marginTop="20dp"
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/spinnershipto"
         android:layout_toRightOf="@id/headership"
         android:layout_below="@id/nameautocmplete"
-        android:background="@drawable/spinner_border"
-        android:layout_marginLeft="10dp"
+        android:background="@drawable/edittext_border"
+        android:layout_marginLeft="35dp"
         android:layout_marginBottom="20dp"
 
         ></Spinner>
@@ -75,36 +80,36 @@ android:layout_marginLeft="60dp"
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CompanyName:"
+        android:text="Company Name:"
         android:layout_marginLeft="13dp"
         android:layout_below="@+id/spinnershipto"
         android:layout_marginTop="5px"
         android:id="@+id/cmpanyname"
         android:textColor="#ffffff"
+        android:textAppearance="?android:textAppearanceMedium"
 
         />
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
         android:layout_toRightOf="@id/cmpanyname"
         android:layout_below="@id/spinnershipto"
-        android:layout_alignBaseline="@id/cmpanyname"
         android:id="@+id/cmpanytxt"
         android:textColor="#ffffff"
-
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Address:"
-        android:layout_marginLeft="56dp"
         android:layout_below="@+id/cmpanyname"
         android:layout_marginTop="180px"
         android:id="@+id/addressname"
         android:textColor="#ffffff"
-
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginLeft="50dp"
         />
     <EditText
         android:layout_width="match_parent"
@@ -118,36 +123,36 @@ android:layout_marginLeft="60dp"
         android:maxLines="5"
         android:inputType="textMultiLine"
         android:background="@drawable/edittext_border"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="25dp"
         android:scrollbars="vertical"
-
-
-        />
+ />
     <TextView
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Phone #:"
         android:layout_marginLeft="56dp"
-        android:layout_below="@+id/addressname"
-        android:layout_marginTop="180px"
+        android:layout_below="@+id/addresstxt"
         android:id="@+id/phonename"
         android:textColor="#ffffff"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginTop="30dp"
 
         />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
         android:layout_toRightOf="@id/phonename"
         android:layout_below="@id/addresstxt"
-        android:layout_alignBaseline="@id/phonename"
         android:id="@+id/phonetxt"
         android:inputType="number"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="35dp"
         android:layout_marginRight="10dp"
-        android:textColor="#ffffff"
+        android:textColor="#34495E"
+        android:layout_marginTop="30dp"
+
         />
     <TextView
         android:layout_width="wrap_content"
@@ -158,27 +163,30 @@ android:layout_marginLeft="60dp"
         android:layout_marginTop="70px"
         android:id="@+id/faxname"
         android:textColor="#ffffff"
+        android:textAppearance="?android:textAppearanceMedium"
 
         />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
         android:layout_toRightOf="@id/faxname"
-        android:layout_below="@id/addresstxt"
-        android:layout_alignBaseline="@id/faxname"
+        android:layout_below="@id/phonetxt"
         android:id="@+id/faxtxt"
-
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="48dp"
         android:layout_marginRight="10dp"
-        android:textColor="#ffffff"
+        android:textColor="#34495E"
+        android:layout_marginTop="25dp"
+
         />
-<Button
-    android:layout_marginTop="10dp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/nextbtn"
-    android:text="Next"
-    android:layout_below="@+id/faxname"
-    android:layout_centerHorizontal="true" />
+        <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nextbtn"
+        android:text="Next"
+        android:layout_below="@+id/faxname"
+        android:layout_centerHorizontal="true"
+        android:background="#5cbd5c"
+        />
 </RelativeLayout>

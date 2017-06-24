@@ -55,7 +55,7 @@ save=(Button)findViewById(R.id.btnsave);
         invoice.setAdapter(invoiceadapter);
         orderdate=(EditText)findViewById(R.id.orderdate);
         reqdate=(EditText)findViewById(R.id.reqiredate);
-      updatelabel();
+        updatelabel();
         updatelabel2();
         btn=(ImageButton)findViewById(R.id.showtime);
         req=(ImageButton)findViewById(R.id.showreqtime);

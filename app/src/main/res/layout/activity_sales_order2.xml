@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bkgrnd1"
     tools:context="hecosoft.com.its_nts.SalesOrder2">
     <TextView
         android:id="@+id/monthyear"
@@ -10,20 +11,19 @@
         android:layout_height="wrap_content"
         android:text="Sales Type:"
         android:textAppearance="?android:textAppearanceMedium"
-
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="70dp"
         android:textColor="#ffffff"
+        android:layout_marginLeft="10dp"
         />
 
     <Spinner
         android:id="@+id/spinersalestype"
-        android:layout_width="150dp "
+        android:layout_width="230dp "
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/monthyear"
-     android:layout_marginTop="10dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/spinner_border"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginBottom="10dp"
         >
     </Spinner>
@@ -35,19 +35,20 @@
         android:layout_below="@id/spinersalestype"
         android:layout_marginTop="20dp"
         android:id="@+id/txt1"
-        android:layout_marginLeft="70dp"
+        android:textAppearance="?android:textAppearanceMedium"
         android:textColor="#ffffff"
+        android:layout_marginLeft="10dp"
 
         />
     <EditText
-        android:layout_width="150dp"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/spinersalestype"
         android:id="@+id/orderdate"
         android:layout_toRightOf="@id/txt1"
         android:editable="false"
         android:textAlignment="center"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="32dp"
         android:textColor="#ffffff"
         />
     <ImageButton
@@ -58,7 +59,7 @@
         android:src="@drawable/cal1"
         android:layout_below="@id/spinersalestype"
         android:layout_toRightOf="@id/orderdate"
-        android:layout_marginLeft="5dp"
+
 
         />
     <TextView
@@ -68,12 +69,12 @@
         android:layout_below="@id/orderdate"
         android:layout_marginTop="20dp"
         android:id="@+id/txt2"
-        android:layout_marginLeft="50dp"
+        android:textAppearance="?android:textAppearanceMedium"
         android:textColor="#ffffff"
-
+        android:layout_marginLeft="10dp"
         />
     <EditText
-        android:layout_width="150dp"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/orderdate"
         android:id="@+id/reqiredate"
@@ -91,7 +92,7 @@
         android:text="show"
         android:src="@drawable/cal1"
         android:layout_below="@id/showtime"
-        android:layout_marginLeft="5dp"
+
         android:layout_toRightOf="@id/reqiredate"
 
         />
@@ -99,11 +100,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Notes:"
-        android:layout_marginLeft="86dp"
+
         android:layout_below="@+id/txt2"
-        android:layout_marginTop="180px"
+        android:layout_marginTop="150px"
         android:id="@+id/notes"
+        android:textAppearance="?android:textAppearanceMedium"
         android:textColor="#ffffff"
+        android:layout_marginLeft="40dp"
 
         />
     <EditText
@@ -118,8 +121,8 @@
         android:maxLines="5"
         android:inputType="textMultiLine"
         android:background="@drawable/edittext_border"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="25dp"
         android:scrollbars="vertical"
 
         />
@@ -131,18 +134,18 @@
         android:textAppearance="?android:textAppearanceMedium"
         android:layout_below="@id/anotes"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="15dp"
         android:textColor="#ffffff"
         />
 
     <Spinner
         android:id="@+id/spinersalesperson"
-        android:layout_width="150dp "
+        android:layout_width="220dp "
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/txt3"
         android:layout_below="@id/anotes"
         android:background="@drawable/spinner_border"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="15dp"
         >
@@ -155,30 +158,32 @@
         android:textAppearance="?android:textAppearanceMedium"
         android:layout_below="@id/txt3"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="15dp"
         android:textColor="#ffffff"
         />
 
     <Spinner
         android:id="@+id/spinerinvoice"
-        android:layout_width="150dp "
+        android:layout_width="220dp "
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/txt4"
         android:layout_below="@id/spinersalesperson"
         android:background="@drawable/spinner_border"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="5dp"
         >
 
     </Spinner>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Save"
         android:id="@+id/btnsave"
-android:layout_below="@id/spinerinvoice"
+        android:layout_below="@id/spinerinvoice"
         android:layout_centerInParent="true"
         android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:background="#5cbd5c"
         />
 </RelativeLayout>
