@@ -6,355 +6,355 @@
     android:background="@drawable/bkgrnd1"
 
     tools:context="hecosoft.com.its_nts.NewSalesOrder">
-   <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Customer Name:"
-        android:paddingLeft="10dp"
-        android:layout_marginTop="40dp"
-        android:textColor="#ffffff"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:id="@+id/custname"
-      />
-    <AutoCompleteTextView
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/nameautocmplete"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:textColor="#ffffff"
-        android:popupBackground= "#175D77"
-        android:layout_below="@id/custname"
-        android:textSize="12dp"
-        />
-    <EditText
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/nameautocmplete"
-        android:layout_alignBaseline="@id/nameautocmplete"
-        android:id="@+id/showid"
-        android:editable="false"
-        android:textColor="#ffffff"
-
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ship To :"
-        android:layout_marginTop="5dp"
-        android:layout_below="@id/nameautocmplete"
-        android:id="@+id/shipname"
-        android:paddingLeft="10dp"
-        android:textColor="#ffffff"
-        android:textAppearance="?android:textAppearanceMedium"
-        />
-    <Spinner
-        android:layout_marginTop="5dp"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinnershipto"
-        android:layout_below="@id/shipname"
-        android:background="@drawable/edittext_border"
-        android:layout_marginLeft="10dp"
-        android:popupBackground= "#175D77"
-        android:textAlignment="gravity"
-        android:textColor="#ffffff"
-         >
-
-    </Spinner>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Company Name:"
-        android:paddingLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/spinnershipto"
-        android:id="@+id/cmpanyname"
-        android:textColor="#ffffff"
-        android:textAppearance="?android:textAppearanceMedium"
-
-        />
-    <EditText
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cmpanyname"
-        android:id="@+id/cmpanytxt"
-        android:textColor="#ffffff"
-        android:layout_marginLeft="5dp"
-        android:textSize="15dp"
-    />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Address:"
-        android:layout_below="@+id/cmpanytxt"
-        android:id="@+id/addressname"
-        android:textColor="#ffffff"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:paddingLeft="10dp"
-        android:layout_marginTop="5dp"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/addressname"
-        android:layout_marginTop="5dp"
-        android:id="@+id/addresstxt"
-        android:gravity="top|left"
-        android:minLines="5"
-        android:maxLines="5"
-        android:inputType="textMultiLine"
-        android:background="@drawable/edittext_border"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="25dp"
-        android:scrollbars="vertical"
-        android:textSize="12dp"
-        android:textColor="#ffffff"
- />
-    <TextView
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Phone #:"
-        android:paddingLeft="10dp"
-        android:layout_below="@+id/addresstxt"
-        android:id="@+id/phonename"
-        android:textColor="#ffffff"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:layout_marginTop="10dp"
-
-        />
-
-    <EditText
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/phonename"
-        android:id="@+id/phonetxt"
-        android:inputType="number"
-        android:layout_marginLeft="10dp"
-        android:textColor="#ffffff"
-
-
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Fax:"
-        android:paddingLeft="10dp"
-        android:layout_below="@+id/phonetxt"
-        android:id="@+id/faxname"
-        android:textColor="#ffffff"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:layout_marginTop="5dp"
-        />
-
-    <EditText
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/faxname"
-        android:id="@+id/faxtxt"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textColor="#ffffff"
-        android:textSize="12dp"
-
-        />
-
-        <TextView
-            android:id="@+id/monthyear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sales Type:"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:layout_marginTop="30dp"
-            android:textColor="#ffffff"
-            android:layout_marginLeft="10dp"
-            android:layout_below="@id/faxname"
-            />
-        <Spinner
-            android:layout_marginTop="5dp"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinnersale"
-            android:layout_below="@id/faxtxt"
-            android:layout_toRightOf="@id/monthyear"
-            android:background="@drawable/edittext_border"
-            android:layout_marginLeft="10dp"
-            android:popupBackground= "#175D77"
-            android:textAlignment="gravity"
-            android:textColor="#ffffff"
-            >
-
-        </Spinner>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Order Date:"
-            android:layout_below="@id/monthyear"
-            android:layout_marginTop="20dp"
-            android:id="@+id/ordertext"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="#ffffff"
-            android:layout_marginLeft="10dp"
-
-            />
-        <EditText
-            android:layout_width="175dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/spinnersale"
-            android:id="@+id/orderdate"
-            android:layout_toRightOf="@id/ordertext"
-            android:editable="false"
-            android:textAlignment="center"
-            android:layout_marginLeft="12dp"
-            android:textColor="#ffffff"
-            />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/showtime"
-            android:text="show"
-            android:src="@drawable/cal1"
-            android:layout_below="@id/spinnersale"
-            android:layout_toRightOf="@id/orderdate"
-         />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Req.Date:     "
-            android:layout_below="@id/orderdate"
-            android:layout_marginTop="20dp"
-            android:id="@+id/reqdatetext"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="#ffffff"
-            android:layout_marginLeft="10dp"
-            />
-        <EditText
-            android:layout_width="175dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/orderdate"
-            android:id="@+id/reqiredate"
-            android:layout_toRightOf="@id/reqdatetext"
-            android:editable="false"
-            android:textAlignment="center"
-            android:layout_marginLeft="5dp"
-            android:textColor="#ffffff"
-
-            />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/showreqtime"
-            android:text="show"
-            android:src="@drawable/cal1"
-            android:layout_below="@id/showtime"
-            android:layout_toRightOf="@id/reqiredate"
-
-            />
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="Notes:"
-            android:layout_below="@+id/reqdatetext"
-            android:layout_marginTop="70dp"
-            android:id="@+id/notes"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="#ffffff"
-            android:layout_marginLeft="10dp"
-
-            />
-        <EditText
+        android:layout_height="match_parent">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/anotes"
-            android:layout_toRightOf="@id/notes"
-            android:layout_below="@id/reqiredate"
-            android:gravity="top|left"
-            android:minLines="5"
-            android:maxLines="5"
-            android:inputType="textMultiLine"
-            android:background="@drawable/edittext_border"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="25dp"
-            android:scrollbars="vertical"
-            android:textColor="#ffffff"
+            android:layout_height="wrap_content">
 
-            />
-        <TextView
-            android:id="@+id/salepersontext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sales Person:"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:layout_below="@id/notes"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="10dp"
-            android:textColor="#ffffff"
-            />
-        <Spinner
-            android:layout_marginTop="5dp"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinersaletext"
-            android:layout_below="@id/anotes"
-            android:layout_toRightOf="@id/salepersontext"
-            android:background="@drawable/edittext_border"
-            android:layout_marginLeft="10dp"
-            android:popupBackground= "#175D77"
-            android:textAlignment="gravity"
-            android:textColor="#ffffff"
-            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Name:"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:textColor="#ffffff"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:id="@+id/custname"
+                />
+            <AutoCompleteTextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameautocmplete"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#ffffff"
+                android:popupBackground= "#175D77"
+                android:layout_below="@id/custname"
+                android:textSize="12dp"
+                />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/nameautocmplete"
+                android:layout_alignBaseline="@id/nameautocmplete"
+                android:id="@+id/showid"
+                android:editable="false"
+                android:textColor="#ffffff"
 
-        </Spinner>
-        <TextView
-            android:id="@+id/invoicetext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Invoice Term:"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:layout_below="@id/salepersontext"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="10dp"
-            android:textColor="#ffffff"
-            />
+                />
 
-        <Spinner
-            android:layout_marginTop="5dp"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinnerinvoicetext"
-            android:layout_below="@id/invoicetext"
-            android:background="@drawable/edittext_border"
-            android:layout_marginLeft="10dp"
-            android:popupBackground= "#175D77"
-            android:textAlignment="gravity"
-            android:textColor="#ffffff"
-            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ship To :"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/nameautocmplete"
+                android:id="@+id/shipname"
+                android:paddingLeft="10dp"
+                android:textColor="#ffffff"
+                android:textAppearance="?android:textAppearanceMedium"
+                />
+            <Spinner
+                android:layout_marginTop="5dp"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnershipto"
+                android:layout_below="@id/shipname"
+                android:background="@drawable/edittext_border"
+                android:layout_marginLeft="10dp"
+                android:popupBackground= "#175D77"
+                android:textAlignment="gravity"
+                android:textColor="#ffffff"
+                >
 
-        </Spinner>
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="Save"
-            android:id="@+id/btnsave"
-            android:layout_below="@id/spinnerinvoicetext"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="5dp"
-            android:layout_centerHorizontal="true"
-            android:background="#5cbd5c"
-            />
+            </Spinner>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Company Name:"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/spinnershipto"
+                android:id="@+id/cmpanyname"
+                android:textColor="#ffffff"
+                android:textAppearance="?android:textAppearanceMedium"
+
+                />
+            <EditText
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cmpanyname"
+                android:id="@+id/cmpanytxt"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="5dp"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address:"
+                android:layout_below="@+id/cmpanytxt"
+                android:id="@+id/addressname"
+                android:textColor="#ffffff"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addressname"
+                android:layout_marginTop="5dp"
+                android:id="@+id/addresstxt"
+                android:gravity="top|left"
+                android:minLines="5"
+                android:maxLines="5"
+                android:inputType="textMultiLine"
+                android:background="@drawable/edittext_border"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="25dp"
+                android:scrollbars="vertical"
+                android:textSize="12dp"
+                android:textColor="#ffffff"
+                />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone #:"
+                android:paddingLeft="10dp"
+                android:layout_below="@+id/addresstxt"
+                android:id="@+id/phonename"
+                android:textColor="#ffffff"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_marginTop="10dp"
+
+                />
+
+            <EditText
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phonename"
+                android:id="@+id/phonetxt"
+                android:inputType="number"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
 
 
-    </RelativeLayout>
-</ScrollView>
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fax:"
+                android:paddingLeft="10dp"
+                android:layout_below="@+id/phonetxt"
+                android:id="@+id/faxname"
+                android:textColor="#ffffff"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_marginTop="5dp"
+                />
+
+            <EditText
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/faxname"
+                android:id="@+id/faxtxt"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+
+                />
+
+            <TextView
+                android:id="@+id/monthyear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sales Type:"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_marginTop="30dp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/faxname"
+                />
+            <Spinner
+                android:layout_marginTop="5dp"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnersale"
+                android:layout_below="@id/faxtxt"
+                android:layout_toRightOf="@id/monthyear"
+                android:background="@drawable/edittext_border"
+                android:layout_marginLeft="10dp"
+                android:popupBackground= "#175D77"
+                android:textAlignment="gravity"
+                android:textColor="#ffffff"
+                >
+
+            </Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Date:"
+                android:layout_below="@id/monthyear"
+                android:layout_marginTop="20dp"
+                android:id="@+id/ordertext"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="10dp"
+
+                />
+            <EditText
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnersale"
+                android:id="@+id/orderdate"
+                android:layout_toRightOf="@id/ordertext"
+                android:editable="false"
+                android:textAlignment="center"
+                android:layout_marginLeft="12dp"
+                android:textColor="#ffffff"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/showtime"
+                android:text="show"
+                android:src="@drawable/cal1"
+                android:layout_below="@id/spinnersale"
+                android:layout_toRightOf="@id/orderdate"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Req.Date:     "
+                android:layout_below="@id/orderdate"
+                android:layout_marginTop="20dp"
+                android:id="@+id/reqdatetext"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="10dp"
+                />
+            <EditText
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/orderdate"
+                android:id="@+id/reqiredate"
+                android:layout_toRightOf="@id/reqdatetext"
+                android:editable="false"
+                android:textAlignment="center"
+                android:layout_marginLeft="5dp"
+                android:textColor="#ffffff"
+
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/showreqtime"
+                android:text="show"
+                android:src="@drawable/cal1"
+                android:layout_below="@id/showtime"
+                android:layout_toRightOf="@id/reqiredate"
+
+                />
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Notes:"
+                android:layout_below="@+id/reqdatetext"
+                android:layout_marginTop="70dp"
+                android:id="@+id/notes"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="10dp"
+
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/anotes"
+                android:layout_toRightOf="@id/notes"
+                android:layout_below="@id/reqiredate"
+                android:gravity="top|left"
+                android:minLines="5"
+                android:maxLines="5"
+                android:inputType="textMultiLine"
+                android:background="@drawable/edittext_border"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="25dp"
+                android:scrollbars="vertical"
+                android:textColor="#ffffff"
+
+                />
+            <TextView
+                android:id="@+id/salepersontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sales Person:"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_below="@id/notes"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                />
+            <Spinner
+                android:layout_marginTop="5dp"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinersaletext"
+                android:layout_below="@id/anotes"
+                android:layout_toRightOf="@id/salepersontext"
+                android:background="@drawable/edittext_border"
+                android:layout_marginLeft="10dp"
+                android:popupBackground= "#175D77"
+                android:textAlignment="gravity"
+                android:textColor="#ffffff"
+                >
+
+            </Spinner>
+            <TextView
+                android:id="@+id/invoicetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invoice Term:"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_below="@id/salepersontext"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                />
+
+            <Spinner
+                android:layout_marginTop="5dp"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerinvoicetext"
+                android:layout_below="@id/invoicetext"
+                android:background="@drawable/edittext_border"
+                android:layout_marginLeft="10dp"
+                android:popupBackground= "#175D77"
+                android:textAlignment="gravity"
+                android:textColor="#ffffff"
+                >
+
+            </Spinner>
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:id="@+id/btnsave"
+                android:layout_below="@id/spinnerinvoicetext"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:background="#5cbd5c"
+                />
+
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

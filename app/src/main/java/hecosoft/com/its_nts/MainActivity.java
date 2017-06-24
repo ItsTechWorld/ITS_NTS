@@ -36,10 +36,14 @@ Button btn1,btn2;
        btn1.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               signin obj=new signin();
-               String n=uname.getText().toString();
-               String p=upass.getText().toString();
-               obj.execute("login",n,p);
+              // signin obj=new signin();
+               //String n=uname.getText().toString();
+               //String p=upass.getText().toString();
+               //obj.execute("login",n,p);
+               Intent i=new Intent(getApplicationContext(),NewSalesOrder.class);
+
+               startActivity(i);
+               finish();
            }
        });
     }

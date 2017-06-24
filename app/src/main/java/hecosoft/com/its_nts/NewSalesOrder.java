@@ -77,9 +77,9 @@ ArrayList<String> contactList;
         name.setText("");
 
         ship=(Spinner)findViewById(R.id.spinnershipto);
-        ship=(Spinner)findViewById(R.id.spinnersale);
-        ship=(Spinner)findViewById(R.id.spinersaletext);
-        ship=(Spinner)findViewById(R.id.spinnerinvoicetext);
+        saletype=(Spinner)findViewById(R.id.spinnersale);
+        saleperson=(Spinner)findViewById(R.id.spinersaletext);
+        invoice=(Spinner)findViewById(R.id.spinnerinvoicetext);
         //Intent i=getIntent();
         //Bundle b=i.getExtras();
         //String n=b.getString("uname");
@@ -90,12 +90,15 @@ get1 obj=new get1();
         countryListAdapter = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_1,contactList);
         name.setAdapter(countryListAdapter);
         ship.setAdapter(spinner);
+        saletype.setAdapter(spinner);
+        saleperson.setAdapter(spinner);
+        invoice.setAdapter(spinner);
         name.setThreshold(1);
         name.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-               // String s = (String) parent.getItemAtPosition(position);
-               // id1.setText(s);
+                String s = (String) parent.getItemAtPosition(position);
+                id1.setText(s);
             }
         });
 
