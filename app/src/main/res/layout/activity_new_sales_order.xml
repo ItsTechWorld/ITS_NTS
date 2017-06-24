@@ -7,23 +7,14 @@
 
     tools:context="hecosoft.com.its_nts.NewSalesOrder">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:text="New Sales Order"
-        android:id="@+id/headertxt"
-        android:textAppearance="?android:textAppearanceLarge"
-        android:gravity="center"
-        android:textColor="#E57F03"
-        android:background="#175D77"
-        />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Customer Name:"
         android:layout_marginLeft="10dp"
-        android:layout_below="@+id/headertxt"
-        android:layout_marginTop="60px"
+
+        android:layout_marginTop="40dp"
         android:id="@+id/headername"
         android:textColor="#ffffff"
         android:textAppearance="?android:textAppearanceMedium"
@@ -31,21 +22,22 @@
         />
     <AutoCompleteTextView
         android:layout_width="150dp"
-        android:layout_height="25dp"
+        android:layout_height="wrap_content"
         android:layout_toRightOf="@id/headername"
-        android:layout_below="@id/headertxt"
-        android:layout_alignBaseline="@id/headername"
+
+       android:layout_marginTop="40dp"
         android:id="@+id/nameautocmplete"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:textColor="#34495E"
+        android:textColor="#ffffff"
         android:popupBackground= "#175D77"
- />
+
+        />
     <EditText
         android:layout_width="50dp"
         android:layout_height="25dp"
         android:layout_toRightOf="@id/nameautocmplete"
-        android:layout_below="@id/headertxt"
+
         android:layout_alignBaseline="@id/nameautocmplete"
         android:id="@+id/showid"
         android:editable="false"
@@ -74,7 +66,6 @@
         android:background="@drawable/edittext_border"
         android:layout_marginLeft="35dp"
         android:layout_marginBottom="20dp"
-        android:popupBackground= "#175D77"
 
         ></Spinner>
 

@@ -1,8 +1,10 @@
 package hecosoft.com.its_nts;
 
 import android.app.DatePickerDialog;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -14,6 +16,18 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -21,6 +35,8 @@ import java.util.Calendar;
 public class SalesOrder2 extends NavigationDrawer {
 
     String[] sales={"Cash Sales","Credit Sales"};
+    String[] invoicedata={"Sale on Credit","30 days","net cash 10 days","Net Cash"};
+    String[] salespersondata={"Adnan Perwaiz","Hafiz Mubeen","Mian Sardar","Mohammad Rafi","Yousaf Qureshi"};
     ArrayAdapter<String> salesadapter,salespersonadapter,invoiceadapter;
     Spinner salestypes,salesperson,invoice;
     Calendar datetime=Calendar.getInstance();
@@ -48,8 +64,8 @@ save=(Button)findViewById(R.id.btnsave);
         salesperson=(Spinner)findViewById(R.id.spinersalesperson);
         invoice=(Spinner)findViewById(R.id.spinerinvoice);
         salesadapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, sales);
-        salespersonadapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, sales);
-        invoiceadapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, sales);
+        salespersonadapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, salespersondata);
+        invoiceadapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, invoicedata);
         salestypes.setAdapter(salesadapter);
         salesperson.setAdapter(salespersonadapter);
         invoice.setAdapter(invoiceadapter);
@@ -70,7 +86,7 @@ save=(Button)findViewById(R.id.btnsave);
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(getApplicationContext(),"Ready to Send",Toast.LENGTH_LONG).show();
+
             }
         });
         btn.setOnClickListener(new View.OnClickListener() {
@@ -110,4 +126,7 @@ datetime.set(Calendar.YEAR, year);
             }
         }
     };
+
+
 }
+
