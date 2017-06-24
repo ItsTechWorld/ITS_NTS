@@ -186,6 +186,46 @@
         android:layout_centerHorizontal="true"
         android:background="#5cbd5c"
         />
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/nextbtn2"
+            android:text="Next"
+            android:layout_below="@+id/nextbtn"
+            android:layout_centerHorizontal="true"
+            android:background="#5cbd5c"
+            />
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/nextbtn3"
+            android:text="Next"
+            android:layout_below="@+id/nextbtn2"
+            android:layout_centerHorizontal="true"
+            android:background="#5cbd5c"
+            />
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/nextbtn4"
+            android:text="Next"
+            android:layout_below="@+id/nextbtn3"
+            android:layout_centerHorizontal="true"
+            android:background="#5cbd5c"
+            />
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/nextbtn5"
+            android:text="Next"
+            android:layout_below="@+id/nextbtn4"
+            android:layout_centerHorizontal="true"
+            android:background="#5cbd5c"
+            />
     </RelativeLayout>
 </ScrollView>
 </RelativeLayout>
