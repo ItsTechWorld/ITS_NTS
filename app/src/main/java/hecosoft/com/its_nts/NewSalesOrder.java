@@ -52,7 +52,7 @@ ArrayList<String> contactList;
 
     AutoCompleteTextView name;
     EditText id1;
-    Spinner ship;
+    Spinner ship,saletype,saleperson,invoice;
     String[] country = {"Pakistan", "India", "Uk", "China"};
     ArrayAdapter<String> spinner;
     ArrayAdapter<String> countryListAdapter;
@@ -75,8 +75,11 @@ ArrayList<String> contactList;
         id1=(EditText)findViewById(R.id.showid);
         id1.setText("");
         name.setText("");
-        net=(Button)findViewById(R.id.nextbtn);
+
         ship=(Spinner)findViewById(R.id.spinnershipto);
+        ship=(Spinner)findViewById(R.id.spinnersale);
+        ship=(Spinner)findViewById(R.id.spinersaletext);
+        ship=(Spinner)findViewById(R.id.spinnerinvoicetext);
         //Intent i=getIntent();
         //Bundle b=i.getExtras();
         //String n=b.getString("uname");
@@ -91,24 +94,11 @@ get1 obj=new get1();
         name.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String s = (String) parent.getItemAtPosition(position);
-                id1.setText(s);
+               // String s = (String) parent.getItemAtPosition(position);
+               // id1.setText(s);
             }
         });
-        net.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                    String a=name.getText().toString();
-                if (a.equals("")) {
-                    Log.d("Check","In if");
 
-                                     Toast.makeText(getApplicationContext(),"Please specify the Customer Name First",Toast.LENGTH_LONG).show();
-
-                } else {
-                      Intent i = new Intent(NewSalesOrder.this, SalesOrder2.class);
-                      startActivity(i);
-                }
-            } });
     }
     private class get1 extends AsyncTask<Void, Void, Void> {
         StringBuilder sb = new StringBuilder();
