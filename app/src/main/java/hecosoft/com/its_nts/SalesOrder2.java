@@ -49,7 +49,7 @@ public class SalesOrder2 extends NavigationDrawer {
       txt.setVisibility(View.INVISIBLE);
       img.setVisibility(View.INVISIBLE);
       save = (Button) findViewById(R.id.btnsave);
-      mylist=(ListView)findViewById(R.id.mylist);
+
   }
 
 }

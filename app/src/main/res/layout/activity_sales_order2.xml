@@ -5,22 +5,158 @@
     android:layout_height="match_parent"
     android:background="@drawable/bkgrnd1"
     tools:context="hecosoft.com.its_nts.SalesOrder2">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/headerlayout"
+    >
 
-   <ListView
-       android:layout_width="match_parent"
+   <TextView
+       android:layout_width="match_parent "
        android:layout_height="wrap_content"
-       android:id="@+id/mylist"
-       >
-   </ListView>
+       android:id="@+id/itemdesctext"
+       android:text="Item Description"
+       android:textAppearance="?android:textAppearanceMedium"
+       android:paddingLeft="10dp"
+       android:layout_marginTop="10dp"
+       />
+
+
+    <EditText
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:layout_below="@id/itemdesctext"
+        android:id="@+id/itemdescfield"
+        android:layout_marginLeft="10dp"
+
+        />
+    <EditText
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:layout_below="@id/itemdesctext"
+        android:id="@+id/itemidfield"
+        android:layout_marginLeft="7dp"
+        android:layout_toRightOf="@id/itemdescfield"
+        android:editable="false"
+
+        />
+    <TextView
+        android:layout_width="match_parent "
+        android:layout_height="wrap_content"
+        android:id="@+id/unittext"
+        android:text="Unit"
+        android:layout_below="@id/itemdescfield"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <Spinner
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:layout_below="@id/unittext"
+        android:id="@+id/unitspinner"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/edittext_border"
+
+        />
+    <TextView
+        android:layout_width="match_parent "
+        android:layout_height="wrap_content"
+        android:id="@+id/quantitytext"
+        android:text="Quantity"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/unitspinner"
+        />
+
+
+    <EditText
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:layout_below="@id/quantitytext"
+        android:id="@+id/quantityfield"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:layout_width="match_parent "
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/quantityfield"
+        android:id="@+id/pricetext"
+        />
+
+
+    <EditText
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:layout_below="@id/pricetext"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/pricefield"
+        android:editable="false"
+
+        />
+    <TextView
+        android:layout_width="match_parent "
+        android:layout_height="wrap_content"
+        android:text="Net Amount"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/pricefield"
+        android:id="@+id/netamounttext"
+        />
+
+
+    <EditText
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:layout_below="@id/netamounttext"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/netamountfield"
+        android:editable="false"
+
+        />
+
+
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Save"
         android:id="@+id/btnsave"
-        android:layout_below="@id/mylist"
+        android:layout_below="@id/netamountfield"
         android:layout_centerInParent="true"
         android:layout_marginTop="5dp"
         android:layout_centerHorizontal="true"
         android:background="#5cbd5c"
         />
+
+
 </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerlayout">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+    </ListView>
+    </RelativeLayout>
+</RelativeLayout>
+
