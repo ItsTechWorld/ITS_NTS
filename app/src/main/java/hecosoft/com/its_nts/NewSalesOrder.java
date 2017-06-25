@@ -61,17 +61,11 @@ public class NewSalesOrder extends NavigationDrawer {
 
     AutoCompleteTextView name;
     EditText id1,orderdate,reqdate,addresstxt,phonetxt,cmpnytxt,ship;
-    Spinner saletype,saleperson,invoice;
-    String[] country = {"Pakistan", "India", "Uk", "China"};
-    String[] sales={"Cash Sales","Credit Sales"};
-    String[] invoicedata={"Sale on Credit","30 days","net cash 10 days","Net Cash"};
-    String[] salespersondata={"Adnan Perwaiz","Hafiz Mubeen","Mian Sardar","Mohammad Rafi","Yousaf Qureshi"};
-    ArrayAdapter<String> salesadapter,salespersonadapter,invoiceadapter;
     Calendar datetime=Calendar.getInstance();
     SimpleDateFormat dateFormat=new SimpleDateFormat("dd/MM/yyyy");
-    ArrayAdapter<String> spinner;
+
     ArrayAdapter<String> countryListAdapter;
-    ArrayAdapter<String> auto;
+
     String cname;
     Button net;
     int i=0;
@@ -86,10 +80,6 @@ public class NewSalesOrder extends NavigationDrawer {
         drawerLayout.addView(contentView, 0);
         //contactList = new ArrayList<HashMap<String, String>>();
         contactList=new ArrayList<>();
-        spinner=new ArrayAdapter<String>(getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,country);
-        salesadapter=new ArrayAdapter<String>(getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,sales);
-        salespersonadapter=new ArrayAdapter<String>(getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,salespersondata);
-        invoiceadapter=new ArrayAdapter<String>(getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,invoicedata);
         txt.setVisibility(View.INVISIBLE);
         img.setVisibility(View.INVISIBLE);
         name=(AutoCompleteTextView)findViewById(R.id.nameautocmplete);
@@ -101,12 +91,7 @@ public class NewSalesOrder extends NavigationDrawer {
         name.setText("");
 
         ship=(EditText)findViewById(R.id.spinnershipto);
-        saletype=(Spinner)findViewById(R.id.spinnersale);
-        saleperson=(Spinner)findViewById(R.id.spinersaletext);
-        invoice=(Spinner)findViewById(R.id.spinnerinvoicetext);
-        //Intent i=getIntent();
-        //Bundle b=i.getExtras();
-        //String n=b.getString("uname");
+
         orderdate=(EditText)findViewById(R.id.orderdate);
         reqdate=(EditText)findViewById(R.id.reqiredate);
         updatelabel();
@@ -117,9 +102,6 @@ public class NewSalesOrder extends NavigationDrawer {
         countryListAdapter = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_1,contactList);
         name.setAdapter(countryListAdapter);
 
-        saletype.setAdapter(salesadapter);
-        saleperson.setAdapter(salespersonadapter);
-        invoice.setAdapter(invoiceadapter);
         name.setThreshold(1);
         btn=(ImageButton)findViewById(R.id.showtime);
         req=(ImageButton)findViewById(R.id.showreqtime);
