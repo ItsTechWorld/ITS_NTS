@@ -67,7 +67,7 @@ public class NewSalesOrder extends NavigationDrawer {
     ArrayAdapter<String> countryListAdapter;
 
     String cname;
-    Button net;
+    Button next;
     int i=0;
     ImageButton btn,req;
     @Override
@@ -87,6 +87,7 @@ public class NewSalesOrder extends NavigationDrawer {
         addresstxt=(EditText)findViewById(R.id.addresstxt);
         phonetxt=(EditText)findViewById(R.id.phonetxt);
         cmpnytxt=(EditText)findViewById(R.id.cmpanytxt);
+        next=(Button)findViewById(R.id.btnsave);
         id1.setText("");
         name.setText("");
 
@@ -121,13 +122,20 @@ public class NewSalesOrder extends NavigationDrawer {
         name.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                get2 obj=new get2();
+                get2 obj = new get2();
 
-                cname=name.getText().toString();
+                cname = name.getText().toString();
                 String s;
                 s = cname.substring(1, cname.length() - 1);
 
                 obj.execute(s);
+            }
+        });
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(NewSalesOrder.this,SalesOrder2.class);
+                startActivity(i);
             }
         });
 

@@ -37,6 +37,10 @@ public class SalesOrder2 extends NavigationDrawer {
 
     ListView mylist;
     Button save;
+  EditText description,price,netamount,quantity,id;
+  Spinner unit;
+  ArrayAdapter<String> adapter;
+  String ar[]={"Tin","Bag"};
   @Override
     protected void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
@@ -49,6 +53,16 @@ public class SalesOrder2 extends NavigationDrawer {
       txt.setVisibility(View.INVISIBLE);
       img.setVisibility(View.INVISIBLE);
       save = (Button) findViewById(R.id.btnsave);
+    adapter=new ArrayAdapter<String>(getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,ar);
+    description=(EditText)findViewById(R.id.itemdescfield);
+    id=(EditText)findViewById(R.id.itemidfield);
+    price=(EditText)findViewById(R.id.pricefield);
+    quantity=(EditText)findViewById(R.id.quantityfield);
+    netamount=(EditText)findViewById(R.id.netamountfield);
+    unit=(Spinner)findViewById(R.id.unitspinner);
+    mylist=(ListView)findViewById(R.id.mylist);
+      unit.setAdapter(adapter);
+
 
   }
 
