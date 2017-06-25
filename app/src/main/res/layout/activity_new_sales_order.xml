@@ -175,18 +175,18 @@
                 android:layout_height="wrap_content"
                 android:text="Sales Type:"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="60dp"
                 android:textColor="#ffffff"
                 android:layout_marginLeft="10dp"
                 android:layout_below="@id/faxname"
                 />
             <Spinner
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinnersale"
-                android:layout_below="@id/faxtxt"
-                android:layout_toRightOf="@id/monthyear"
+                android:layout_below="@id/monthyear"
+
                 android:background="@drawable/edittext_border"
                 android:layout_marginLeft="10dp"
                 android:popupBackground= "#175D77"
@@ -200,7 +200,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Order Date:"
-                android:layout_below="@id/monthyear"
+                android:layout_below="@id/spinnersale"
                 android:layout_marginTop="20dp"
                 android:id="@+id/ordertext"
                 android:textAppearance="?android:textAppearanceMedium"
@@ -218,6 +218,7 @@
                 android:textAlignment="center"
                 android:layout_marginLeft="12dp"
                 android:textColor="#ffffff"
+                android:layout_marginTop="5dp"
                 />
             <ImageButton
                 android:layout_width="wrap_content"
@@ -227,6 +228,7 @@
                 android:src="@drawable/cal1"
                 android:layout_below="@id/spinnersale"
                 android:layout_toRightOf="@id/orderdate"
+                android:layout_marginTop="5dp"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -297,17 +299,17 @@
                 android:text="Sales Person:"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:layout_below="@id/notes"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="65dp"
                 android:layout_marginLeft="10dp"
                 android:textColor="#ffffff"
                 />
             <Spinner
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="15dp"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinersaletext"
-                android:layout_below="@id/anotes"
-                android:layout_toRightOf="@id/salepersontext"
+                android:layout_below="@id/salepersontext"
+
                 android:background="@drawable/edittext_border"
                 android:layout_marginLeft="10dp"
                 android:popupBackground= "#175D77"
@@ -322,14 +324,14 @@
                 android:layout_height="wrap_content"
                 android:text="Invoice Term:"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:layout_below="@id/salepersontext"
-                android:layout_marginTop="50dp"
+                android:layout_below="@id/spinersaletext"
+                android:layout_marginTop="30dp"
                 android:layout_marginLeft="10dp"
                 android:textColor="#ffffff"
                 />
 
             <Spinner
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinnerinvoicetext"
@@ -349,7 +351,7 @@
                 android:id="@+id/btnsave"
                 android:layout_below="@id/spinnerinvoicetext"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="15dp"
                 android:layout_centerHorizontal="true"
                 android:background="#5cbd5c"
                 />
