@@ -28,18 +28,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -60,7 +56,7 @@ public class NewSalesOrder extends NavigationDrawer {
 ArrayList<String> contactList;
 
     AutoCompleteTextView name;
-    EditText id1,orderdate,reqdate,addresstxt,phonetxt,cmpnytxt;
+    EditText id1,orderdate,reqdate;
     Spinner ship,saletype,saleperson,invoice;
     String[] country = {"Pakistan", "India", "Uk", "China"};
     String[] sales={"Cash Sales","Credit Sales"};
@@ -72,7 +68,6 @@ ArrayList<String> contactList;
     ArrayAdapter<String> spinner;
     ArrayAdapter<String> countryListAdapter;
     ArrayAdapter<String> auto;
-    String cname;
     Button net;
     int i=0;
     ImageButton btn,req;
@@ -94,9 +89,6 @@ ArrayList<String> contactList;
         img.setVisibility(View.INVISIBLE);
         name=(AutoCompleteTextView)findViewById(R.id.nameautocmplete);
         id1=(EditText)findViewById(R.id.showid);
-        addresstxt=(EditText)findViewById(R.id.addresstxt);
-        phonetxt=(EditText)findViewById(R.id.phonetxt);
-        cmpnytxt=(EditText)findViewById(R.id.cmpanytxt);
         id1.setText("");
         name.setText("");
 
@@ -139,13 +131,7 @@ get1 obj=new get1();
         name.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-get2 obj=new get2();
 
-              cname=name.getText().toString();
-                String s;
-                s = cname.substring(1, cname.length() - 1);
-
-                obj.execute(s);
             }
         });
 
@@ -240,7 +226,7 @@ get2 obj=new get2();
                         contactList.add(contact);
 */
                         ArrayList<String> contact=new ArrayList<>();
-                        contact.add(name);
+                        contact.add( name);
                         contactList.add(contact.toString());
                     }
 
@@ -269,96 +255,6 @@ get2 obj=new get2();
         protected void onPostExecute(Void s) {
 
 
-
-
-        }
-    }
-    private class get2 extends AsyncTask<String, Void, Void> {
-        String cid;
-        StringBuilder sb = new StringBuilder();
-        String url = "http://192.168.1.199/nts/getdetailandroid.php";
-        String cfname;
-        String caddress1;
-        String phone1;
-
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
-
-        @Override
-        protected Void doInBackground(String... params) {
-
-            try {
-
-String n=params[0];
-                URL u = new URL(url);
-                HttpURLConnection con = (HttpURLConnection) u.openConnection();
-                con.setDoOutput(true);
-                con.setRequestMethod("POST");
-                OutputStream os = con.getOutputStream();
-                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
-                String data = URLEncoder.encode("name", "UTF-8") + "=" + URLEncoder.encode(n, "UTF-8");
-                bw.write(data);
-                bw.flush();
-                bw.close();
-                InputStream is = con.getInputStream();
-                BufferedReader br = new BufferedReader(new InputStreamReader(is, "iso-8859-1"));
-                String line = "";
-                while ((line = br.readLine()) != null) {
-                    sb.append(line);
-                }
-
-                con.disconnect();
-                String json_str=sb.toString();
-                Log.d("Json",json_str);
-
-                JSONObject obj1=new JSONObject(json_str);
-                JSONArray contacts=obj1.getJSONArray("server_response");
-                int count=0;
-                while(count<contacts.length())
-                {
-                    Log.d("in while","im here");
-                    JSONObject jo=contacts.getJSONObject(count);
-                     cid=jo.getString("cutomerid");
-                     cfname=jo.getString("entry_firstname");
-                    caddress1=jo.getString("address1");
-                    phone1=jo.getString("phone1");
-break;
-
-
-
-                }
-
-
-
-
-
-
-            } catch (UnsupportedEncodingException e1) {
-                e1.printStackTrace();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            } catch (JSONException e1) {
-                e1.printStackTrace();
-            }
-
-
-
-
-
-
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void s) {
-            addresstxt.setText(caddress1);
-            phonetxt.setText(phone1);
-cmpnytxt.setText(cfname);
-            id1.setText(cid);
 
 
         }
