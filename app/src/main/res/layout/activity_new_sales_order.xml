@@ -65,6 +65,7 @@
                android:layout_marginLeft="10dp"
                android:textColor="#ffffff"
                 android:editable="false"
+                android:textSize="12dp"
 
                 >
 
@@ -90,6 +91,7 @@
                 android:textColor="#ffffff"
                 android:layout_marginLeft="5dp"
                 android:textSize="12dp"
+
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -172,9 +174,11 @@
                 android:popupBackground= "#175D77"
                 android:textAlignment="gravity"
                 android:textColor="#ffffff"
-
-
-                >
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+ >
 
             </Spinner>
 
@@ -317,7 +321,7 @@
                 android:text="Invoice Term:"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:layout_below="@id/spinersaletext"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:textColor="#E59A43"
                 />
