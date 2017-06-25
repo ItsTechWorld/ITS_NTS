@@ -131,8 +131,7 @@ get1 obj=new get1();
         name.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String s = (String) parent.getItemAtPosition(position);
-                id1.setText(s);
+
             }
         });
 
