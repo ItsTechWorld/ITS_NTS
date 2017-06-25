@@ -279,7 +279,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/anotes"
-
+                android:layout_marginLeft="10dp"
                 android:layout_below="@id/notes"
                 android:gravity="top|left"
                 android:minLines="5"
@@ -289,6 +289,7 @@
                android:layout_marginTop="10dp"
                 android:layout_marginRight="25dp"
                 android:scrollbars="vertical"
+                android:textSize="12dp"
                 android:textColor="#ffffff"
 
                 />
