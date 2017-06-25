@@ -12,14 +12,13 @@
     >
 
    <TextView
-       android:layout_width="270dp"
+       android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:id="@+id/itemdesctext"
        android:text="Item Description"
        android:textAppearance="?android:textAppearanceMedium"
        android:paddingLeft="10dp"
        android:layout_marginTop="10dp"
-       android:textColor="#E59A43"
        />
 
 
@@ -44,7 +43,7 @@
 
         />
     <TextView
-        android:layout_width="270dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/unittext"
         android:text="Unit"
@@ -52,7 +51,6 @@
         android:textAppearance="?android:textAppearanceMedium"
         android:paddingLeft="10dp"
         android:layout_marginTop="10dp"
-        android:textColor="#E59A43"
         />
 
 
@@ -63,17 +61,11 @@
         android:layout_below="@id/unittext"
         android:id="@+id/unitspinner"
         android:layout_marginLeft="10dp"
-        android:background="@drawable/spinner_border"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="2dp"
-        android:paddingBottom="2dp"
-        android:popupBackground="#073D55"
-
+        android:background="@drawable/edittext_border"
 
         />
     <TextView
-        android:layout_width="270dp "
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/quantitytext"
         android:text="Quantity"
@@ -81,7 +73,6 @@
         android:paddingLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/unitspinner"
-        android:textColor="#E59A43"
         />
 
 
@@ -94,7 +85,7 @@
         android:layout_marginLeft="10dp"
         />
     <TextView
-        android:layout_width="270dp "
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Price"
         android:textAppearance="?android:textAppearanceMedium"
@@ -102,7 +93,6 @@
         android:layout_marginTop="10dp"
         android:layout_below="@id/quantityfield"
         android:id="@+id/pricetext"
-        android:textColor="#E59A43"
         />
 
 
@@ -117,7 +107,7 @@
 
         />
     <TextView
-        android:layout_width="270dp "
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Net Amount"
         android:textAppearance="?android:textAppearanceMedium"
@@ -125,7 +115,6 @@
         android:layout_marginTop="10dp"
         android:layout_below="@id/pricefield"
         android:id="@+id/netamounttext"
-        android:textColor="#E59A43"
         />
 
 
@@ -140,7 +129,6 @@
 
         />
 
-
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -151,6 +139,7 @@
         android:layout_marginTop="5dp"
         android:layout_centerHorizontal="true"
         android:background="#5cbd5c"
+        android:layout_marginBottom="10dp"
         />
 
 
@@ -159,17 +148,68 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/headerlayout">
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/mylist"
-        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#1A607A"
+            >
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:text="Item Description"
+                android:paddingLeft="2dp"
+                android:gravity="center"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:text="Unit"
+                android:paddingLeft="2dp"
+                />
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:text="Quantity"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="Price"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="Amount"
+                android:textSize="15dp"
+                />
 
 
 
 
 
-    </ListView>
+
+        </LinearLayout>
+
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:id="@+id/mylist"
+
+                >
+
+
+
+
+
+        </ListView>
     </RelativeLayout>
 </RelativeLayout>
+
+
 
