@@ -19,7 +19,7 @@
                 android:text="Customer Name:"
                 android:paddingLeft="10dp"
                 android:layout_marginTop="40dp"
-                android:textColor="#ffffff"
+                android:textColor="#E59A43"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:id="@+id/custname"
                 />
@@ -53,7 +53,7 @@
                 android:layout_below="@id/nameautocmplete"
                 android:id="@+id/shipname"
                 android:paddingLeft="10dp"
-                android:textColor="#ffffff"
+                android:textColor="#E59A43"
                 android:textAppearance="?android:textAppearanceMedium"
                 />
             <EditText
@@ -78,7 +78,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/spinnershipto"
                 android:id="@+id/cmpanyname"
-                android:textColor="#ffffff"
+                android:textColor="#E59A43"
                 android:textAppearance="?android:textAppearanceMedium"
 
                 />
@@ -89,7 +89,7 @@
                 android:id="@+id/cmpanytxt"
                 android:textColor="#ffffff"
                 android:layout_marginLeft="5dp"
-                android:textSize="15dp"
+                android:textSize="12dp"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -97,7 +97,7 @@
                 android:text="Address:"
                 android:layout_below="@+id/cmpanytxt"
                 android:id="@+id/addressname"
-                android:textColor="#ffffff"
+                android:textColor="#E59A43"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:paddingLeft="10dp"
                 android:layout_marginTop="5dp"
@@ -131,7 +131,7 @@
                 android:paddingLeft="10dp"
                 android:layout_below="@+id/addresstxt"
                 android:id="@+id/phonename"
-                android:textColor="#ffffff"
+                android:textColor="#E59A43"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:layout_marginTop="10dp"
 
@@ -157,7 +157,7 @@
                 android:text="Sales Type:"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:layout_marginTop="15dp"
-                android:textColor="#ffffff"
+                android:textColor="#E59A43"
                 android:layout_marginLeft="10dp"
                 android:layout_below="@id/phonetxt"
                 />
@@ -167,12 +167,13 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/spinnersale"
                 android:layout_below="@id/monthyear"
-
                 android:background="@drawable/edittext_border"
                 android:layout_marginLeft="10dp"
                 android:popupBackground= "#175D77"
                 android:textAlignment="gravity"
                 android:textColor="#ffffff"
+
+
                 >
 
             </Spinner>
@@ -185,7 +186,7 @@
                 android:layout_marginTop="20dp"
                 android:id="@+id/ordertext"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="#ffffff"
+                android:textColor="#E59A43"
                 android:layout_marginLeft="10dp"
 
                 />
@@ -219,7 +220,7 @@
                 android:layout_marginTop="20dp"
                 android:id="@+id/reqdatetext"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="#ffffff"
+                android:textColor="#E59A43"
                 android:layout_marginLeft="10dp"
                 />
             <EditText
@@ -252,7 +253,7 @@
                 android:layout_marginTop="20dp"
                 android:id="@+id/notes"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="#ffffff"
+                android:textColor="#E59A43"
                 android:layout_marginLeft="10dp"
 
                 />
@@ -267,14 +268,16 @@
                 android:maxLines="5"
                 android:inputType="textMultiLine"
                 android:background="@drawable/edittext_border"
-               android:layout_marginTop="10dp"
+                 android:layout_marginTop="10dp"
                 android:layout_marginRight="25dp"
+                android:layout_marginLeft="10dp"
                 android:scrollbars="vertical"
                 android:textColor="#ffffff"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingTop="2dp"
                 android:paddingBottom="2dp"
+                android:textSize="12dp"
 
                 />
             <TextView
@@ -286,7 +289,7 @@
                 android:layout_below="@id/anotes"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
-                android:textColor="#ffffff"
+                android:textColor="#E59A43"
                 />
             <Spinner
                 android:layout_marginTop="15dp"
@@ -316,7 +319,7 @@
                 android:layout_below="@id/spinersaletext"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="10dp"
-                android:textColor="#ffffff"
+                android:textColor="#E59A43"
                 />
 
             <Spinner
@@ -340,13 +343,15 @@
             <Button
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="Save"
+                android:text="Next"
                 android:id="@+id/btnsave"
                 android:layout_below="@id/spinnerinvoicetext"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="15dp"
                 android:layout_centerHorizontal="true"
-                android:background="#5cbd5c"
+                android:background="@drawable/edittext_border"
+                android:textColor="#E59A43"
+
                 />
 
 
