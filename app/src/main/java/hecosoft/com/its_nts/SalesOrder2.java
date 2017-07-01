@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -37,8 +38,9 @@ public class SalesOrder2 extends NavigationDrawer {
 
     ListView mylist;
     Button save;
-  EditText description,price,netamount,quantity,id;
+  EditText price,netamount,quantity,id;
   Spinner unit;
+  AutoCompleteTextView description;
   ArrayAdapter<String> adapter;
   String ar[]={"Tin","Bag"};
   @Override
@@ -54,7 +56,7 @@ public class SalesOrder2 extends NavigationDrawer {
       img.setVisibility(View.INVISIBLE);
       save = (Button) findViewById(R.id.btnsave);
     adapter=new ArrayAdapter<String>(getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,ar);
-    description=(EditText)findViewById(R.id.itemdescfield);
+    description=(AutoCompleteTextView)findViewById(R.id.itemdescfield);
     id=(EditText)findViewById(R.id.itemidfield);
     price=(EditText)findViewById(R.id.pricefield);
     quantity=(EditText)findViewById(R.id.quantityfield);
@@ -62,6 +64,7 @@ public class SalesOrder2 extends NavigationDrawer {
     unit=(Spinner)findViewById(R.id.unitspinner);
     mylist=(ListView)findViewById(R.id.mylist);
       unit.setAdapter(adapter);
+      description.setThreshold(1);
 
 
   }

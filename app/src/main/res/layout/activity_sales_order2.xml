@@ -22,7 +22,7 @@
        />
 
 
-    <EditText
+    <AutoCompleteTextView
         android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:textSize="12dp"
@@ -153,6 +153,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="#1A607A"
+            android:id="@+id/headerlayout2"
             >
             <TextView
                 android:layout_width="130dp"
@@ -200,7 +201,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
               android:id="@+id/mylist"
-
+android:layout_below="@id/headerlayout2"
                 >
 
 
